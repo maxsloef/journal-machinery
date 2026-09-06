@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.journal.overnight-review</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__UV__</string>
+    <string>run</string>
+    <string>--project</string>
+    <string>__VAULT__/reviews</string>
+    <string>python</string>
+    <string>__VAULT__/reviews/review.py</string>
+    <string>overnight</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>__VAULT__/reviews</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>3</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/tmp/journal-overnight.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/journal-overnight-error.log</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOME</key>
+    <string>__HOME__</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:__HOME__/.local/bin</string>
+    <key>UV_PROJECT_ENVIRONMENT</key>
+    <string>__HOME__/.venvs/journal-reviews</string>
+  </dict>
+</dict>
+</plist>

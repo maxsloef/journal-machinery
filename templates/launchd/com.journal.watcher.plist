@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.journal.watcher</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__UV__</string>
+    <string>run</string>
+    <string>--project</string>
+    <string>__VAULT__/reviews</string>
+    <string>python</string>
+    <string>__VAULT__/reviews/watcher.py</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/tmp/journal-watcher.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/journal-watcher-error.log</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOME</key>
+    <string>__HOME__</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:__HOME__/.local/bin</string>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+    <key>UV_PROJECT_ENVIRONMENT</key>
+    <string>__HOME__/.venvs/journal-reviews</string>
+  </dict>
+</dict>
+</plist>
