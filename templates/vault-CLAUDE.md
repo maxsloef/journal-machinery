@@ -10,7 +10,9 @@ When discussing journal entries, search through past entries to understand conte
 
 ## Semantic search
 
-For semantic/conceptual searches (not keyword-based), use a subagent with the full journal in context.
+Skip this section if the full journal is already in your context. Sessions started by `reviews/review.py` (mention replies and reviews) and by `reviews/chat.sh` begin with every entry in the prompt; just use what you have.
+
+If you were opened as a plain `claude` session in this folder, you have only this file and whatever you read. For semantic/conceptual searches (not keyword-based), use a subagent with the full journal in context.
 
 **Step 1:** Run the compile script:
 ```bash
